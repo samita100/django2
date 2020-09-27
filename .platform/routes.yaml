@@ -4,10 +4,6 @@
 #
 # See https://docs.platform.sh/user_guide/reference/routes-yaml.html
 
-"https://{default}/":
-    type: upstream
-    upstream: "app:http"
-
 "https://www.{default}/":
     type: redirect
     to: "https://{default}/"
